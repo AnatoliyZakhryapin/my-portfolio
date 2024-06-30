@@ -1,18 +1,21 @@
 @use './partials/variables' as*;
 @import "bootstrap/scss/bootstrap";
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 
 img {
   max-width: 100%;
 }
 
-ul, ol, menu {
+ul,
+ol,
+menu {
   list-style: none;
 }
 
@@ -21,3 +24,21 @@ a {
   text-decoration: none;
 }
 
+section:first-of-type {
+  // margin-top: 100px;
+  height: calc(100vh - 0px);
+}
+
+section {
+  height: calc(100vh - 100px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  color: white;
+  background: #333;
+}
+
+section:nth-child(odd) {
+  background: #242424;
+}

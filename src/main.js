@@ -8,20 +8,24 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import App from './App.vue'
 
 import { 
-	faTableCellsLarge as fasTableCellsLarge,
-    faTableCells as fasTableCells,
-    faFilter as fasFilter,
+	faHouse as fasHouse,
+    faBriefcase as fasBriefCase,
+    faCode as fasCode,
+    faBars as fasBars,
 } from '@fortawesome/free-solid-svg-icons'
 
 import { 
-	faSquare as farSquare,
+	faAddressCard as farAddressCard,
+    faAddressBook as farAddressBook,
 } from '@fortawesome/free-regular-svg-icons'
 
 library.add(
-    fasTableCellsLarge,
-    fasTableCells,
-    farSquare,
-    fasFilter
+    fasHouse,
+    farAddressCard,
+    fasBriefCase,
+    fasCode,
+    farAddressBook,
+    fasBars
 	)
 
 createApp(App).component('font-awesome-icon', FontAwesomeIcon).mount('#app')
