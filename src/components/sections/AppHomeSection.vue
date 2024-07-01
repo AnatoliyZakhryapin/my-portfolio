@@ -3,7 +3,11 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-auto">
-                    <h1>Home section</h1>
+                    <TypingEffect 
+                        :textPart1=typeText.textPart1
+                        :textPart2=typeText.textPart2
+                        :textPart3=typeText.textPart3 
+                    />
                 </div>
             </div>
         </div>
@@ -12,14 +16,27 @@
 
 
 <script>
+import TypingEffect from '../AppTypingEffect.vue';
+import { store } from '../../store';
 
 export default {
-
+    data() {
+        return {
+            store,
+        }
+    },
+    components: {
+        TypingEffect
+    },
+    computed: {
+        typeText() {
+            return store.sectionsTextContent[store.currentLanguage].home.typeText;
+        }
+    },
 }
 </script>
 
 <style lang="scss" scoped>
-
 .dark .parallax {
     -webkit-filter: brightness(110%) contrast(110%) grayscale(100%);
     filter: brightness(110%) contrast(110%) grayscale(100%);

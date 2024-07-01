@@ -189,7 +189,7 @@ export default {
         const element = document.getElementById(section);
         if (element) {
           const rect = element.getBoundingClientRect();
-          console.log(rect);
+          // console.log(rect);
           if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2) {
             this.activeSection = section;
             break;

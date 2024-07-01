@@ -28,5 +28,25 @@ export const store = reactive({
             en: 'Inglese',
             it: 'Italiano',
         },
+    },
+    sectionsTextContent:{
+        en: {
+            home: {
+                typeText: {
+                    textPart1: "I'm",
+                    textPart2: "Anatoliy Zakhryapin",
+                    textPart3: "Jr. Full Stack Developer"
+                }
+            }
+        },
+        it: {
+            home: {
+                typeText: {
+                    textPart1: "Sono",
+                    textPart2: "Anatoliy Zakhryapin",
+                    textPart3: "Sviluppatore Full Stack"
+                }
+            }
+        },
     }
 });
