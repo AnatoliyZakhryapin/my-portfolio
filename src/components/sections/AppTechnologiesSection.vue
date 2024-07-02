@@ -3,7 +3,8 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-auto">
-                    <h1>Technologies section</h1>
+                    <a class="link" href="https://my-minesweeper-js.netlify.app/"> Try Game</a>
+                    <WorkInProgress/>
                 </div>
             </div>
         </div>
@@ -11,8 +12,12 @@
 </template>
 
 <script>
-export default {
+import WorkInProgress from '../sections/AppWorkInProgress.vue'
 
+export default {
+    components: {
+        WorkInProgress,
+    }
 }
 </script>
 
