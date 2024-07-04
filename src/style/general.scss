@@ -27,30 +27,141 @@ a {
 section:first-of-type {
   // margin-top: 100px;
   height: calc(100vh - 0px);
+  align-items: center;
 }
 
 section {
   height: calc(100vh - 100px);
   display: flex;
   justify-content: center;
-  align-items: center;
   font-weight: 700;
-  color: white;
-  background: #333;
+  color: $color_06;
+  background-color: $color_03;
+  padding: 30px 0px;
+  position: relative;
+
+  &.about-section {
+    height: auto;
+  }
+
+  &:nth-child(odd) {
+    background-color: $color_04;
+  }
+
+  & .section-title {
+    font-size: 36px;
+    position: relative;
+    margin-bottom: 40px;
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 160%;
+      height: 2px;
+      display: block;
+      margin-top: 5px;
+      left: 50%;
+      /* Inizia dal centro */
+      background: linear-gradient(to right, transparent 0%, $color_06 50%, transparent 100%);
+      transform: translateX(-50%);
+      /* Centra l'elemento */
+      transition: width 0.3s ease;
+      -webkit-transition: width 0.3s ease;
+      transform-origin: center;
+      /* Imposta l'origine della trasformazione al centro */
+    }
+  }
+
+  .dark & {
+    color: $color_02;
+    background-color: $color_07;
+
+    &:nth-child(odd) {
+      background-color: $color_06;
+    }
+
+    & .section-title::after {
+      background: linear-gradient(to right, transparent 0%, transparent 5%, $color_02 50%, transparent 95%, transparent 100%);
+    }
+
+    & .card.card-custom {
+      color: $color_02;
+      ;
+    }
+  }
 }
 
-section:nth-child(odd) {
-  background: #242424;
+// Button
+.button {
+  border: 1px solid;
+  padding: 8px 16px;
+  border-radius: 8px;
+  color: $color_06;
+  transition: color 0.3s, border-color 0.3s, background-color 0.3s;
+  box-shadow: 0px 0px 10px 4px rgba(0, 0, 0, 0.43);
+
+  &:hover {
+    border-color: $color_22;
+    background-color: $color_22;
+    color: $color_02;
+    font-weight: bold;
+
+    box-shadow: 0px 0px 16px 4px rgba(0, 0, 0, 0.43);
+  }
+
+  .dark & {
+    color: $color_21;
+    box-shadow: 0px 0px 10px 4px rgba(255, 255, 255, 0.43);
+
+    &:hover {
+      border-color: $color_21;
+      background-color: $color_21;
+      color: $color_06;
+      font-weight: bold;
+  
+      box-shadow: 0px 0px 16px 4px  rgba(255, 255, 255, 0.43);
+    }
+  }
+}
+
+// Icon
+
+.icon-link {
+  color: $color_06;
+  position: relative;
+  transition: all 0.3s;
+  width: 36px;
+  height: 36px;
+
+  & svg {
+    width: 32px;
+    height: 32px;
+  }
+
+  &:hover {
+    color: $color_22;
+    font-weight: bold;
+
+    & svg {
+      width: 36px;
+      height: 36px;
+    }
+  }
+
+  .dark & {
+    color: $color_02;
+
+    &:hover {
+      color: $color_21;
+      font-weight: bold;
+    }
+  }
 }
 
 // Work in progress
 #app section .animatione-body {
-  height: calc(100vh - 100px)!important;
+  height: calc(100vh - 100px) !important;
   background-image: none;
-}
-
-section {
-  position: relative;
 }
 
 .link {
@@ -93,3 +204,38 @@ section {
 
   100% {}
 }
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+  section .section-title {
+    font-size: 56px;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+
+  section .section-title {
+    font-size: 72px;
+    margin-bottom: 50px;
+  }
+
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+
+  section {
+    padding: 50px 0px;
+  }
+
+  .about-section .card.card-custom img {
+    width: 100%;
+  }
+}
+
+// X-Large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {}
+
+// XX-Large devices (larger desktops, 1400px and up)
+@media (min-width: 1400px) {}

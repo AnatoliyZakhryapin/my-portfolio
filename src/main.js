@@ -12,6 +12,7 @@ import {
     faBriefcase as fasBriefCase,
     faCode as fasCode,
     faBars as fasBars,
+    faEnvelope as fasEnvelope,
 } from '@fortawesome/free-solid-svg-icons'
 
 import { 
@@ -19,13 +20,25 @@ import {
     faAddressBook as farAddressBook,
 } from '@fortawesome/free-regular-svg-icons'
 
+import { 
+	faGithub as fabGithub,
+    faLinkedin as fabLinkedin,
+    faTelegram as fabTelegram,
+    faFacebook as fabFacebook,
+} from '@fortawesome/free-brands-svg-icons'
+
 library.add(
     fasHouse,
     farAddressCard,
     fasBriefCase,
     fasCode,
     farAddressBook,
-    fasBars
+    fasBars,
+    fabGithub,
+    fabLinkedin,
+    fasEnvelope,
+    fabTelegram,
+    fabFacebook
 	)
 
 createApp(App).component('font-awesome-icon', FontAwesomeIcon).mount('#app')
