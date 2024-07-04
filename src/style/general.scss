@@ -227,10 +227,14 @@ section {
 
   section {
     padding: 50px 0px;
-  }
 
-  .about-section .card.card-custom img {
-    width: 100%;
+    &.about-section {
+      height: calc(100vh - 100px);
+
+      & .card.card-custom img {
+        width: 100%;
+      }
+    }
   }
 }
 
